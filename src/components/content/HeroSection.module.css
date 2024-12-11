@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 180px 20px 100px;
+  max-width: 1380px;
+  margin: 0 auto 2rem;
+  gap: 5rem;
+}
+
+.h1 {
+  font-family: 'TheCalonue';
+  font-size: 6.5rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  margin: 0;
+}

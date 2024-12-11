@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'AcPoiret';
+  src: url('./assets/fonts/ac-poiret.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {  
+  font-family: 'TheCalonue';
+  src: url('./assets/fonts/the-calonue-400.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'AcPoiret', sans-serif;
+  font-size: 18px;
+  line-height: 1.25;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #001219;
+  min-height: 100vh;
+  background-color: #f7f8ff;
+  --color-primary: #171c37;
+  --color-primary-2: #5469e7;
+  --color-primary-3: #f7f8ff;
+  --color-hover: #4258d2;
+}
