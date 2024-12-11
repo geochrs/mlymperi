@@ -11,7 +11,7 @@ function App() {
         children: [{ index: true, element: <HomePage /> }],
       },
     ],
-    { basename: '/mlymperi' } // Add basename here
+    { basename: '/mlymperi/' } // Add basename here
   );
 
   return <RouterProvider router={router} />;
