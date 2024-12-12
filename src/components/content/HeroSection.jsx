@@ -8,13 +8,14 @@ export default function HeroSection() {
           <div className={classes.content}>
             <p>
               My name is Maria and I am a graphic designer.<br></br>I specialize
-              in logo design, corporate identity and branding, as well as
-              packaging design. <br></br>
+              in <span>logo</span> design, <span>corporate identity</span> and{' '}
+              <span>branding</span>, as well as
+              <span> packaging</span> design. <br></br>
               Minimalism, functionality and aesthetics are the very foundations
               of my work.
               <br />
               <br />
-              The goal through design is to make thought visible!
+              The goal through design is to make thought <span>visible!</span>
             </p>
           </div>
         </div>
