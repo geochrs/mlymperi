@@ -1,7 +1,19 @@
 .container {
-    max-width: 1380px;
-    margin: 0 auto;
-    padding: 120px 20px;
-    text-align: center;
-  }
-  
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.h2 {
+  font-size: 4.5rem;
+  font-family: 'TheCalonue';
+  font-weight: bold;
+  letter-spacing: 0.3rem;
+  margin-bottom: 0;
+}
+
+.container p {
+  font-size: 1.2rem;
+  letter-spacing: 0.08rem;
+}
