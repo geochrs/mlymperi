@@ -5,7 +5,7 @@
   font-style: normal;
 }
 
-@font-face {  
+@font-face {
   font-family: 'TheCalonue';
   src: url('./assets/fonts/the-calonue-400.ttf') format('truetype');
   font-weight: normal;
@@ -26,7 +26,15 @@
   min-height: 100vh;
   background-color: #f7f8ff;
   --color-primary: #001219;
-  --color-primary-2: #9076e7;
+  --color-primary-2: #6701e699;
   --color-primary-3: #f7f8ff;
   --color-hover: #4258d2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
 }
