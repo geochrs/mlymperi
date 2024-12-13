@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 180px 20px 100px;
-  max-width: 1380px;
+  padding: 180px 50px 100px;
+  max-width: 1700px;
   margin: 0 auto 2rem;
   gap: 5rem;
 }
