@@ -22,13 +22,27 @@ export default function Navbar() {
     }, 500);
   };
 
+  const handleContactClick = () => {
+    navigate('/');
+
+    setTimeout(() => {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 200);
+  };
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.target.id === 'portfolio') {
+          if (
+            entry.target.id === 'portfolio' ||
+            entry.target.id === 'contact'
+          ) {
             if (entry.isIntersecting) {
-              setActiveSection('portfolio');
+              setActiveSection(entry.target.id);
             } else {
               setActiveSection('');
             }
@@ -40,9 +54,12 @@ export default function Navbar() {
 
     if (location.pathname === '/') {
       const portfolioSection = document.querySelector('#portfolio');
-      if (portfolioSection) {
-        observer.observe(portfolioSection);
-      }
+      const contactSection = document.querySelector('#contact');
+
+      if (portfolioSection) observer.observe(portfolioSection);
+      if (contactSection) observer.observe(contactSection);
+    } else {
+      setActiveSection('');
     }
 
     return () => observer.disconnect();
@@ -90,7 +107,15 @@ export default function Navbar() {
                 About
               </NavLink>
             </li>
-            <li>Contact</li>
+            <li>
+              <a
+                href="#"
+                onClick={handleContactClick}
+                className={activeSection === 'contact' ? classes.active : ''}
+              >
+                Contact
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
