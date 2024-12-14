@@ -1,5 +1,5 @@
 .container {
-  max-width: 1500px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 100px 20px;
   text-align: center;
@@ -17,4 +17,56 @@
   font-size: 1.7rem;
   letter-spacing: 0.08rem;
   color: var(--color-primary-2);
+}
+
+.contactForm {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  width: 100%;
+  gap: 1rem;
+}
+
+.inputName,
+.inputEmail {
+  flex: 1;
+  min-width: 45%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid var(--color-primary);
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.textarea {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid var(--color-primary);
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+
+.buttonWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.formButton {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  background-color: var(--color-primary);
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.formButton:hover {
+  background-color: var(--color-primary-2);
 }
