@@ -1,6 +1,7 @@
 import ContactSection from '../components/content/ContactSection';
 import HeroSection from '../components/content/HeroSection';
 import PortfolioSection from '../components/content/PortfolioSection';
+import ScrollToTopButton from '../components/layout/ScrollToTopButton';
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -19,6 +20,7 @@ export default function HomePage() {
       <HeroSection />
       <PortfolioSection />
       <ContactSection />
+      <ScrollToTopButton />
     </>
   );
 }
