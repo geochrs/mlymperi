@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 180px 50px 100px;
+  padding: 180px 40px 100px;
   max-width: 1700px;
   margin: 0 auto 2rem;
   gap: 5rem;
@@ -26,4 +26,10 @@
 .content span {
   color: var(--color-primary-2);
   font-weight: bold;
+}
+
+@media (max-width: 980px) {
+  .container {
+    padding: 180px 20px 100px;
+  }
 }

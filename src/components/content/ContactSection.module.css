@@ -70,3 +70,9 @@
 .formButton:hover {
   background-color: var(--color-primary-2);
 }
+
+@media (max-width: 980px) {
+  .container {
+    padding: 100px 10px;
+  }
+}
