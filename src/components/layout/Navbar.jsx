@@ -10,6 +10,11 @@ export default function Navbar() {
   const location = useLocation();
   const [activeSection, setActiveSection] = useState('');
   const [isSticky, setIsSticky] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   const handlePortfolioClick = () => {
     navigate('/');
@@ -87,6 +92,16 @@ export default function Navbar() {
           <img src={logo} alt="lymperi logo" className={classes.logo} />
         </Link>
         <nav className={classes.navBar}>
+          <div
+            className={`${classes.hamburger} ${
+              isMenuOpen ? classes.hamburgerActive : ''
+            }`}
+            onClick={toggleMenu}
+          >
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
           <ul className={classes.navList}>
             <li>
               <a

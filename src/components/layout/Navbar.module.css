@@ -60,3 +60,51 @@
 .navList a.active {
   color: var(--color-primary-2);
 }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 7.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hamburger div {
+  width: 37px;
+  height: 4px;
+  background-color: var(--color-primary);
+  transition: all 0.3s ease;
+}
+
+.hamburgerActive div:nth-child(1) {
+  transform: translateY(12px) rotate(45deg);
+}
+
+.hamburgerActive div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburgerActive div:nth-child(3) {
+  transform: translateY(-11px) rotate(-45deg);
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 20px 15px 0;
+  }
+  .navList {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navBar {
+    flex: 0;
+  }
+
+  .sticky {
+    padding: 10px 15px 0;
+  }
+}
