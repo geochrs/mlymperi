@@ -46,7 +46,7 @@
   height: 100%;
   background-color: var(--color-primary-2);
   z-index: -1;
-  animation: fillBackground 1s ease-in-out forwards;
+  animation: fillBackground 1.5s ease-in-out forwards;
 }
 
 @keyframes fillBackground {
