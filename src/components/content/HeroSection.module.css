@@ -27,8 +27,39 @@
 }
 
 .content span {
-  color: var(--color-primary-2);
+  color: var(--color-primary);
   font-weight: bold;
+  display: inline-block;
+  position: relative;
+  padding: 0 0.2rem;
+  overflow: hidden;
+  vertical-align: middle;
+
+}
+
+.content span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--color-primary-2);
+  z-index: -1;
+  animation: fillBackground 1s ease-in-out forwards;
+}
+
+@keyframes fillBackground {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.content span {
+  z-index: 1;
 }
 
 @media (max-width: 980px) {

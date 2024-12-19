@@ -9,7 +9,7 @@ export default function HeroSection() {
             <p>
               My name is Maria and I am a graphic designer.<br></br>I specialize
               in <span>logo</span> design, <span>corporate identity</span> and{' '}
-              <span>branding</span>, as well as
+              <span>branding</span>, as well as {''}
               <span> packaging</span> design. <br></br>
               Minimalism, functionality and aesthetics are the very foundations
               of my work.
