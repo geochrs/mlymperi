@@ -1,9 +1,9 @@
-name: Deploy
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main
+      - main  # Trigger the workflow on push to the main branch
 
 jobs:
   build:
@@ -14,36 +14,36 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v3
+        with:
+          node-version: 16  # Specify the Node.js version you're using
 
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        run: npm install
 
       - name: Build project
-        run: npm run build
-
-      - name: Upload production-ready build files
-        uses: actions/upload-artifact@v3
-        with:
-          name: production-files
-          path: ./dist
+        run: npm run build  # Builds the project (creates dist folder)
 
   deploy:
-    name: Deploy
-    needs: build
+    name: Deploy to GitHub Pages
+    needs: build  # Ensure the build job runs before deploy
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'  # Only run this job if the push is to main
 
     steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v3
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          name: production-files
-          path: ./dist
+          node-version: 16  # Specify the Node.js version you're using
+
+      - name: Install dependencies
+        run: npm install  # Install the required dependencies again for deployment
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+        run: npm run deploy  # Run the deploy script which uses gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Automatically provided by GitHub Actions
