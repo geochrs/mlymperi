@@ -112,6 +112,10 @@
     left: 0;
   }
 
+  .stickyLinks {
+    top: 3.7rem;
+  }
+
   .hamburger {
     display: flex;
   }
