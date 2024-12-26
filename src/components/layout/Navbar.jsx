@@ -60,7 +60,7 @@ export default function Navbar() {
           }
         });
       },
-      { threshold: 0.4 }
+      { threshold: 0.2 }
     );
 
     if (location.pathname === '/') {
