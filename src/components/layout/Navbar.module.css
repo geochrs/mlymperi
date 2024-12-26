@@ -94,29 +94,22 @@
   }
 
   .navList {
-    display: none;
     flex-direction: column;
     position: absolute;
-    top: -20rem;
-    left: 0;
+    top: 5rem;
+    left: -120rem;
     right: 0;
     background-color: #fff;
     width: 100%;
     padding: 1rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    /* transform: translateY(-100%); */
-    /* opacity: 0; */
-    /* visibility: hidden; */
-    transition: all 0.5s ease-in;
+    transition: all 0.3s ease-in-out;
   }
 
-  .navList.show {
+  .show {
     display: flex;
-    top: 15rem;
-    /* opacity: 1; */
-    /* visibility: visible; */
-    /* transform: translateY(0); */
-    /* transition: all 0.5s ease-in; */
+    top: 5rem;
+    left: 0;
   }
 
   .hamburger {

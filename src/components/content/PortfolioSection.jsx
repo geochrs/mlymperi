@@ -13,25 +13,24 @@ export default function PortfolioSection() {
 
   const getCustomOrder = (rowIndex) => {
     const patterns = [
-      [0, 2, 1], // First pattern
-      [2, 1, 0], // Second pattern
-      [1, 0, 2], // Third pattern
+      [0, 2, 1],
+      [2, 1, 0],
+      [1, 0, 2],
     ];
-    return patterns[rowIndex % patterns.length]; // Cycle through patterns
+    return patterns[rowIndex % patterns.length];
   };
 
   const getAOSDelay = (index) => {
-    const rowIndex = Math.floor(index / 3); // Calculate the row number
-    const customOrder = getCustomOrder(rowIndex); // Get the pattern for the current row
-    const orderIndex = customOrder[index % 3]; // Map index to the custom order
-    return orderIndex * 50; // Example: 0 -> 0ms, 2 -> 200ms, 1 -> 100ms
+    const rowIndex = Math.floor(index / 3);
+    const customOrder = getCustomOrder(rowIndex);
+    const orderIndex = customOrder[index % 3];
+    return orderIndex * 50;
   };
 
   return (
     <section id="portfolio" className={classes.section}>
       <div className={classes.container}>
         <h2 className={classes.h2}>Portfolio</h2>
-        {/* <p>A small sample of the logos I have designed.</p> */}
         <div className={classes.cardsContainer}>
           {cards.map((card, index) => (
             <div

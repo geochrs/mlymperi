@@ -16,7 +16,12 @@ export default function Navbar() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   const handlePortfolioClick = () => {
+    closeMenu();
     navigate('/');
 
     setTimeout(() => {
@@ -28,6 +33,7 @@ export default function Navbar() {
   };
 
   const handleContactClick = () => {
+    closeMenu();
     navigate('/');
 
     setTimeout(() => {
@@ -120,6 +126,7 @@ export default function Navbar() {
                 className={({ isActive }) =>
                   isActive ? classes.active : undefined
                 }
+                onClick={closeMenu}
               >
                 About
               </NavLink>
