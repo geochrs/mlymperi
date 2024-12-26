@@ -102,7 +102,9 @@ export default function Navbar() {
             <div></div>
             <div></div>
           </div>
-          <ul className={classes.navList}>
+          <ul
+            className={`${classes.navList} ${isMenuOpen ? classes.show : ''}`}
+          >
             <li>
               <a
                 href="#"
