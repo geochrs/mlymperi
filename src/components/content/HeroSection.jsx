@@ -10,8 +10,8 @@ export default function HeroSection() {
     >
       <defs>
         <linearGradient id="underline-gradient" gradientTransform="rotate(110)">
-          <stop offset="5%" stopColor="#CDC2E0" />
-          <stop offset="95%" stopColor="#CDC2E0" />
+          <stop offset="5%" stopColor="#A896D3" />
+          <stop offset="95%" stopColor="#9B87C4" />
         </linearGradient>
       </defs>
       <g>
@@ -31,17 +31,17 @@ export default function HeroSection() {
             <p>
               My name is Maria and I am a graphic designer.<br></br>I specialize
               in{' '}
-              <span className={classes.underlineText}>logo {underlineSVG}</span>{' '}
+              <span className={classes.underlineText}>logo</span>{' '}
               design,{' '}
               <span className={classes.underlineText}>
-                corporate identity {underlineSVG}
+                corporate identity
               </span>{' '}
               and{' '}
               <span className={classes.underlineText}>
-                branding {underlineSVG}
+                branding
               </span>
               , as well as {''}
-              <span className={classes.underlineText}> packaging {underlineSVG}</span> design. <br></br>
+              <span className={classes.underlineText}> packaging</span> design. <br></br>
               Minimalism, functionality and aesthetics are the very foundations
               of my work.
               <br />
