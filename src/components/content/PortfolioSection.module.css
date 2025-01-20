@@ -28,8 +28,8 @@
 
 .card {
   position: relative;
-  flex: 1 1 calc(33.33% - 10px);
-  max-width: calc(33.33% - 10px);
+  flex: 1 1 calc(29% - 10px);
+  max-width: calc(29% - 10px);
   height: auto;
   aspect-ratio: 1 / 1;
   display: flex;
