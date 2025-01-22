@@ -1,4 +1,6 @@
 import classes from './HeroSection.module.css';
+import video from '../../assets/background.mov';
+
 export default function HeroSection() {
   const underlineSVG = (
     <svg
@@ -26,27 +28,35 @@ export default function HeroSection() {
     <section className={classes.section}>
       <div className={classes.container}>
         <div className={classes['left-content']}>
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className={classes.backgroundVideo}
+          >
+            <source src={video} type="video/mp4" />
+          </video>
           <h1 className={classes.h1}>hello!</h1>
           <div className={classes.content}>
             <p>
               My name is Maria and I am a graphic designer.<br></br>I specialize
-              in{' '}
-              <span className={classes.underlineText}>logo</span>{' '}
-              design,{' '}
+              in <span className={classes.underlineText}>logo</span> design,{' '}
+              <span className={classes.underlineText}>corporate identity</span>{' '}
+              and <span className={classes.underlineText}>branding</span>, as
+              well as {''}
               <span className={classes.underlineText}>
-                corporate identity
-              </span>{' '}
-              and{' '}
-              <span className={classes.underlineText}>
-                branding
-              </span>
-              , as well as {''}
-              <span className={classes.underlineText}> packaging</span> design. <br></br>
+                {' '}
+                packaging
+              </span> design. <br></br>
               Minimalism, functionality and aesthetics are the very foundations
               of my work.
               <br />
               <br />
-              The goal through design is to make thought <span className={classes.underlineText}>visible! {underlineSVG}</span>
+              The goal through design is to make thought{' '}
+              <span className={classes.underlineText}>
+                visible! {underlineSVG}
+              </span>
             </p>
           </div>
         </div>
