@@ -1,5 +1,7 @@
 import classes from './HeroSection.module.css';
 import video from '../../assets/background.mov';
+import video2 from '../../assets/1.mp4';
+import video3 from '../../assets/2.mp4';
 
 export default function HeroSection() {
   const underlineSVG = (
@@ -35,7 +37,7 @@ export default function HeroSection() {
             playsInline
             className={classes.backgroundVideo}
           >
-            <source src={video} type="video/mp4" />
+            <source src={video3} type="video/mp4" />
           </video>
           <h1 className={classes.h1}>hello!</h1>
           <div className={classes.content}>
