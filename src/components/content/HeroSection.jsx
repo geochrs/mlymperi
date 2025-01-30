@@ -54,9 +54,7 @@ export default function HeroSection() {
               <br />
               <br />
               The goal through design is to make thought{' '}
-              <span className={classes.underlineText}>
-                visible! {underlineSVG}
-              </span>
+              <span className={classes.underlineText}>visible!</span>
             </p>
           </div>
         </div>

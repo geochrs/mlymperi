@@ -2,21 +2,34 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 100px 20px;
-  text-align: center;
+  display: flex;
 }
 
 .h2 {
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   font-family: 'TheCalonue';
   font-weight: bold;
   letter-spacing: 0.3rem;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .container p {
   font-size: 1.7rem;
   letter-spacing: 0.08rem;
+  margin-bottom: 0.5rem;
   color: var(--color-primary-2);
+}
+
+.emailInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.svgContainer {
+ display: flex;
+ gap: 1rem;
 }
 
 .contactForm {
@@ -73,6 +86,12 @@
 
 @media (max-width: 980px) {
   .container {
+    flex-direction: column;
+    flex-wrap: wrap;
     padding: 100px 10px;
+  }
+
+  .svgContainer {
+    margin-bottom: 2rem;
   }
 }
