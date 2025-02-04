@@ -3,13 +3,39 @@
   margin: 0 auto;
   padding: 90px 0;
   text-align: center;
+  overflow: hidden;
 }
 
 .h2 {
-  font-size: 4.5rem;
+  font-size: 8.5rem;
   font-family: 'TheCalonue';
   font-weight: bold;
   letter-spacing: 0.3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.arrow {
+  margin-left: 1.5rem;
+  display: flex;
+}
+
+.movingH2 {
+  .h2 {
+    animation: moving 10s linear 0s infinite;
+  }
+  display: flex;
+  gap: 2rem;
+}
+
+@keyframes moving {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
 }
 
 .container p {

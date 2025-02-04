@@ -1,6 +1,24 @@
 import classes from './PortfolioSection.module.css';
 import site from '../../utils/portfolioImages';
 
+const arrowSvg = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="120"
+    height="120"
+    fill="none"
+    viewBox="0 0 24 24"
+  >
+    <path
+      stroke="#000"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      d="M4 12h16m0 0-4-4m4 4-4 4"
+    />
+  </svg>
+);
+
 export default function PortfolioSection() {
   const cards = Array.from({ length: 17 }, (_, index) => {
     const id = String(index + 1).padStart(2, '0');
@@ -30,7 +48,23 @@ export default function PortfolioSection() {
   return (
     <section id="portfolio" className={classes.section}>
       <div className={classes.container}>
-        <h2 className={classes.h2}>Portfolio</h2>
+        <div className={classes.movingH2}>
+          <h2 className={classes.h2}>
+            Portfolio <span className={classes.arrow}>{arrowSvg}</span>
+          </h2>
+          <h2 className={classes.h2}>
+            Portfolio <span className={classes.arrow}>{arrowSvg}</span>
+          </h2>
+          <h2 className={classes.h2}>
+            Portfolio <span className={classes.arrow}>{arrowSvg}</span>
+          </h2>
+          <h2 className={classes.h2}>
+            Portfolio <span className={classes.arrow}>{arrowSvg}</span>
+          </h2>
+          <h2 className={classes.h2}>
+            Portfolio <span className={classes.arrow}>{arrowSvg}</span>
+          </h2>
+        </div>
         <div className={classes.cardsContainer}>
           {cards.map((card, index) => (
             <div
