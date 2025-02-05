@@ -28,8 +28,8 @@
 }
 
 .svgContainer {
- display: flex;
- gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .contactForm {
@@ -93,5 +93,11 @@
 
   .svgContainer {
     margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .h2 {
+    font-size: 2.6rem;
   }
 }
