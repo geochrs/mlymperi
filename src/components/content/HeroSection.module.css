@@ -1,15 +1,17 @@
 .section {
-  height: 70vh;
+  min-height: 100vh;
   position: relative;
+  padding-top: 15rem;
+  overflow: hidden;
 }
 
 .backgroundVideo {
   position: absolute;
-  top: -270px;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
-  object-fit: fill;
+  min-height: 100vh;
+  object-fit: cover;
   z-index: -1;
 }
 
@@ -19,7 +21,8 @@
   justify-content: space-between;
   padding: 0 40px 0;
   max-width: 1700px;
-  margin: 15rem auto 0;
+  margin: 0 auto;
+  /* min-height: 100vh; */
 }
 
 .h1 {
@@ -55,14 +58,5 @@
 @media (max-width: 980px) {
   .container {
     padding: 0 20px 0;
-    /* margin: 8rem auto 0; */
   }
-
-  /* .section {
-    height: 50vh;
-  } */
-
-  /* .backgroundVideo {
-    height: 80vh;
-  } */
 }
