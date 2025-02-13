@@ -47,8 +47,7 @@ export default function PortfolioSection() {
 
   return (
     <section id="portfolio" className={classes.section}>
-      <div className={classes.container}>
-        <div className={classes.movingH2}>
+      <div className={classes.movingH2}>
           <h2 className={classes.h2}>
             Portfolio <span className={classes.arrow}>{arrowSvg}</span>
           </h2>
@@ -65,6 +64,8 @@ export default function PortfolioSection() {
             Portfolio <span className={classes.arrow}>{arrowSvg}</span>
           </h2>
         </div>
+      <div className={classes.container}>
+        
         <div className={classes.cardsContainer}>
           {cards.map((card, index) => (
             <div
