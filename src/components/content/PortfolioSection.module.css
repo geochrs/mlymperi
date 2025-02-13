@@ -104,13 +104,4 @@
     flex: 1 1 100%;
     max-width: 100%;
   }
-
-  .h2 {
- font-size: 4.5rem;
-  }
-
-  .arrow {
-    width: 60px;
-    height: 60px;
-  }
 }
