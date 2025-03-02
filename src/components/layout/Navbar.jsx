@@ -1,5 +1,6 @@
 import { NavLink, Link } from 'react-router-dom';
-import logo from '../../assets/images/logo.png';
+import logoBlack from '../../assets/images/logo.png';
+import logoWhite from '../../assets/images/logo2.png';
 import classes from './Navbar.module.css';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -13,7 +14,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen((prevIsMenuOpen) => !prevIsMenuOpen);
   };
 
   const closeMenu = () => {
@@ -89,18 +90,34 @@ export default function Navbar() {
     };
   }, []);
 
+  const navListClasses = `${classes.navList} ${
+    isMenuOpen ? classes.show : ''
+  } ${isSticky ? classes.stickyLinks : classes.nonStickyLinks}`;
+
+  const burgerColor = isMenuOpen
+    ? isSticky
+      ? classes.showSticky
+      : classes.showNonSticky
+    : '';
+
   return (
     <header
       className={`${classes.header} ${isSticky ? classes.sticky : undefined}`}
     >
       <div className={classes.innerContainer}>
         <Link>
-          <img src={logo} alt="lymperi logo" className={classes.logo} />
+          <img
+            src={isSticky ? logoBlack : logoWhite}
+            alt="lymperi logo"
+            className={classes.logo}
+          />
         </Link>
         <nav className={classes.navBar}>
           <div
             className={`${classes.hamburger} ${
               isMenuOpen ? classes.hamburgerActive : ''
+            } ${
+              isSticky ? classes.hamburgerSticky : classes.hamburgerNonSticky
             }`}
             onClick={toggleMenu}
           >
@@ -108,11 +125,7 @@ export default function Navbar() {
             <div></div>
             <div></div>
           </div>
-          <ul
-            className={`${classes.navList} ${isMenuOpen ? classes.show : ''} ${
-              isSticky ? classes.stickyLinks : ''
-            }`}
-          >
+          <ul className={`${navListClasses} ${burgerColor}`}>
             <li>
               <a
                 href="#"

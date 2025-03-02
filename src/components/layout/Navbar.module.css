@@ -57,7 +57,7 @@
 }
 
 .navList a::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: 0;
@@ -108,6 +108,30 @@
 
 .hamburgerActive div:nth-child(3) {
   transform: translateY(-11px) rotate(-45deg);
+}
+
+.hamburgerSticky div {
+  background-color: var(--color-primary);
+}
+
+.hamburgerNonSticky div {
+  background-color: var(--color-primary-3);
+}
+
+.navList.stickyLinks li a {
+  color: var(--color-primary);
+}
+
+.navList.nonStickyLinks li a {
+  color: var(--color-primary-3);
+}
+
+.navList.show.showSticky {
+  background-color: var(--color-primary-3);
+}
+
+.navList.show.showNonSticky {
+  background-color: var(--color-primary);
 }
 
 @media (max-width: 980px) {

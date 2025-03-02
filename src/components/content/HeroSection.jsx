@@ -1,5 +1,5 @@
 import classes from './HeroSection.module.css';
-import video from '../../assets/3.mp4';
+import video from '../../assets/background.mp4';
 
 export default function HeroSection() {
   const underlineSVG = (

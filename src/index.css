@@ -22,12 +22,12 @@
   line-height: 1.25;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #001219;
+  color: #0a0908;
   min-height: 100vh;
-  background-color: #f7f8ff;
-  --color-primary: #001219;
+  background-color: #f8f9fa;
+  --color-primary: #0a0908;
   --color-primary-2: #c79e8f;
-  --color-primary-3: #f7f8ff;
+  --color-primary-3: #f8f9fa;
   --color-hover: #4258d2;
 }
 
