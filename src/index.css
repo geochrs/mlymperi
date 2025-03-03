@@ -1,4 +1,11 @@
 @font-face {
+  font-family: 'Garmot-Regular';
+  src: url('./assets/fonts/Garmot-Regular.OTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'UB-Future-Regular';
   src: url('./assets/fonts/UB-Future-Regular.TTF') format('truetype');
   font-weight: normal;
@@ -46,7 +53,7 @@
 }
 
 :root {
-  font-family: 'UB-Future-Bold', sans-serif;
+  font-family: 'Garmot-Regular', sans-serif;
   font-size: 18px;
   line-height: 1.25;
   -webkit-font-smoothing: antialiased;
@@ -57,7 +64,7 @@
   --color-primary: #0a0908;
   --color-primary-2: #595959;
   --color-primary-3: #f8f9fa;
-  --color-hover: #4258d2;
+  --color-hover: #842cf4;
 }
 
 html {

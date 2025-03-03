@@ -148,7 +148,7 @@ export default function Navbar() {
                 }
                 onClick={closeMenu}
               >
-                λbout
+                About
               </NavLink>
             </li>
             <li>
@@ -157,7 +157,7 @@ export default function Navbar() {
                 onClick={handleContactClick}
                 className={activeSection === 'contact' ? classes.active : ''}
               >
-                Contλct
+                Contact
               </a>
             </li>
           </ul>
