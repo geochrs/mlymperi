@@ -80,7 +80,14 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      setIsSticky(scrollTop > 0);
+      const secondSection = document.getElementById('portfolio');
+      const margin = 50;
+      if (secondSection) {
+        const secondSectionTop = secondSection.getBoundingClientRect().top + window.scrollY - margin;
+        setIsSticky(scrollTop >= secondSectionTop);
+      } else {
+        setIsSticky(scrollTop > 0);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -101,10 +108,8 @@ export default function Navbar() {
     : '';
 
   return (
-    <header
-      className={`${classes.header} ${isSticky ? classes.sticky : undefined}`}
-    >
-      <div className={classes.innerContainer}>
+    <header className={classes.header}>
+      <div className={`${classes.innerContainer} ${isSticky ? classes.sticky : undefined}`}>
         <Link>
           <img
             src={isSticky ? logoBlack : logoWhite}
@@ -143,7 +148,7 @@ export default function Navbar() {
                 }
                 onClick={closeMenu}
               >
-                About
+                λbout
               </NavLink>
             </li>
             <li>
@@ -152,7 +157,7 @@ export default function Navbar() {
                 onClick={handleContactClick}
                 className={activeSection === 'contact' ? classes.active : ''}
               >
-                Contact
+                Contλct
               </a>
             </li>
           </ul>

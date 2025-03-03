@@ -1,15 +1,44 @@
 @font-face {
-  font-family: 'AcPoiret';
-  src: url('./assets/fonts/ac-poiret.TTF') format('truetype');
+  font-family: 'UB-Future-Regular';
+  src: url('./assets/fonts/UB-Future-Regular.TTF') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'TheCalonue';
-  src: url('./assets/fonts/TheCalonue.ttf') format('truetype');
+  font-family: 'UB-Future-Bold';
+  src: url('./assets/fonts/UB-Future-Bold.TTF') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UB-Future-Italic';
+  src: url('./assets/fonts/UB-Future-Italic.TTF') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'UB-FutureCond-Regular';
+  src: url('./assets/fonts/UB-FutureCond-Regular.TTF') format('truetype');
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'UB-FutureCond-Bold';
+  src: url('./assets/fonts/UB-FutureCond-Bold.TTF') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UB-FutureCond-Italic';
+  src: url('./assets/fonts/UB-FutureCond-Italic.TTF') format('truetype');
+  font-weight: normal;
+  font-style: italic;
 }
 
 * {
@@ -17,7 +46,7 @@
 }
 
 :root {
-  font-family: 'AcPoiret', sans-serif;
+  font-family: 'UB-Future-Bold', sans-serif;
   font-size: 18px;
   line-height: 1.25;
   -webkit-font-smoothing: antialiased;
@@ -26,7 +55,7 @@
   min-height: 100vh;
   background-color: #f8f9fa;
   --color-primary: #0a0908;
-  --color-primary-2: #c79e8f;
+  --color-primary-2: #595959;
   --color-primary-3: #f8f9fa;
   --color-hover: #4258d2;
 }
