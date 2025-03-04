@@ -11,6 +11,7 @@ export default function Navbar() {
   const location = useLocation();
   const [activeSection, setActiveSection] = useState('');
   const [isSticky, setIsSticky] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -82,6 +83,7 @@ export default function Navbar() {
       const scrollTop = window.scrollY;
       const secondSection = document.getElementById('portfolio');
       const margin = 50;
+      setIsScrolled(scrollTop > 5);
       if (secondSection) {
         const secondSectionTop = secondSection.getBoundingClientRect().top + window.scrollY - margin;
         setIsSticky(scrollTop >= secondSectionTop);
@@ -109,8 +111,8 @@ export default function Navbar() {
 
   return (
     <header className={classes.header}>
-      <div className={`${classes.innerContainer} ${isSticky ? classes.sticky : undefined}`}>
-        <Link>
+      <div className={`${classes.innerContainer} ${isSticky ? classes.sticky : isScrolled ? classes.scrolled : ''}`}>
+      <Link>
           <img
             src={isSticky ? logoBlack : logoWhite}
             alt="lymperi logo"

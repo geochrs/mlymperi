@@ -19,8 +19,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 40px 0;
-  max-width: 1700px;
+  /* max-width: 1700px; */
   text-align: center;
   margin: 0 auto;
   color: var(--color-primary-3);
@@ -29,16 +28,18 @@
 }
 
 .h1 {
-  font-size: 6.5rem;
+  font-size: 5.5rem;
   margin-bottom: 3rem;
   letter-spacing: 0.2rem;
-  line-height: 0.8;
+  line-height: 0.9;
+  position: relative;
 }
 
 .differentFont {
   font-family: 'UB-Future-Bold';
-  font-size: 9.5rem;
+  font-size: 8rem;
   position: relative;
+  display: inline-block;
   right: 5px;
 }
 
@@ -67,14 +68,8 @@
 }
 
 .quotes {
-  position: relative;
-  top: -5px;
-  right: -65px;
+  position: absolute;
+  top: -10px;
   font-size: 10rem;
 }
 
-@media (max-width: 980px) {
-  .container {
-    padding: 0 20px 0;
-  }
-}

@@ -17,7 +17,7 @@ export default function HeroSection() {
           </video>
           <h1 className={classes.h1}>
             <span className={`${classes.color} ${classes.quotes}`}>&ldquo;</span>M<span className={classes.differentFont}>a</span>ke it simple,
-            <br /> But unique<span className={classes.color}>.</span>
+            <br />But unique<span className={classes.color}>.</span>
           </h1>
           <div className={classes.content}>
             <p>WELCOME</p>

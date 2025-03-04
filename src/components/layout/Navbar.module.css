@@ -10,7 +10,7 @@
 }
 
 .innerContainer {
-  background: var(--color-primary-2);
+  /* background: var(--color-primary-2); */
   padding: 8px 15px;
   border-radius: 35px;
   max-width: 1800px;
@@ -18,6 +18,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scrolled {
+  background: var(--color-primary-2);
 }
 
 .sticky {
