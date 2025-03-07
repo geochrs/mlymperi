@@ -13,6 +13,8 @@ export default function Navbar() {
   const [isSticky, setIsSticky] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const isHomePage = location.pathname === '/';
+
   const toggleMenu = () => {
     setIsMenuOpen((prevIsMenuOpen) => !prevIsMenuOpen);
   };
@@ -112,7 +114,7 @@ export default function Navbar() {
       <div className={`${classes.innerContainer} ${isSticky ? classes.sticky : undefined}`}>
       <Link>
           <img
-            src={isSticky ? logoBlack : logoWhite}
+            src={!isHomePage || isSticky ? logoBlack : logoWhite}
             alt="lymperi logo"
             className={classes.logo}
           />
