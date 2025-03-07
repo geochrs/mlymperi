@@ -13,28 +13,29 @@
 }
 
 .h2 {
-  font-size: 8.5rem;
-  font-family: 'TheCalonue';
-  font-weight: bold;
+  font-size: 5rem;
+  font-family: 'UB-Future-Italic';
+  font-weight: 500;
   letter-spacing: 0.3rem;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
   display: flex;
   align-items: center;
   color: var(--color-primary-3);
 }
 
-.arrow {
-  margin-left: 1.5rem;
-  display: flex;
+.font {
+  font-family: 'UB-Future-Italic';
+  font-weight: 600;
 }
 
 .movingH2 {
   .h2 {
-    animation: moving 10s linear 0s infinite;
+    animation: moving 25s linear 0s infinite;
   }
   display: flex;
   gap: 2rem;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 @keyframes moving {
