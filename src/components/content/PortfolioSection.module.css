@@ -1,9 +1,15 @@
+.section {
+  z-index: 4;
+  position: relative;
+}
 .container {
-  max-width: 1700px;
+  /* max-width: 1700px; */
   margin: 0 auto;
   padding: 90px 0;
   text-align: center;
   overflow: hidden;
+  background: var(--color-primary-3);
+  border-radius: 70px;
 }
 
 .h2 {
@@ -14,6 +20,7 @@
   margin-bottom: 0;
   display: flex;
   align-items: center;
+  color: var(--color-primary-3);
 }
 
 .arrow {

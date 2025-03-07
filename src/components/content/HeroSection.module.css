@@ -3,6 +3,7 @@
   position: relative;
   padding-top: 15rem;
   overflow: hidden;
+  z-index: 1;
 }
 
 .backgroundVideo {
@@ -19,12 +20,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* max-width: 1700px; */
   text-align: center;
   margin: 0 auto;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
   color: var(--color-primary-3);
-
-  /* min-height: 100vh; */
 }
 
 .h1 {
@@ -73,3 +75,9 @@
   font-size: 10rem;
 }
 
+.h1,
+.content p {
+  opacity: var(--opacity-value);
+  transform: translateY(calc(var(--opacity-value) * 20px));
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
