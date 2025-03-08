@@ -65,14 +65,14 @@
   background-color: var(--color-primary-3);
 }
 
-.color {
-  color: var(--color-hover);
-}
-
 .quotes {
   position: absolute;
-  top: -10px;
-  font-size: 10rem;
+  top: -60px;
+}
+
+.quotation {
+  width: 60px;
+  height: 55px;
 }
 
 .h1,

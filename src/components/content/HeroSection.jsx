@@ -1,5 +1,6 @@
 import classes from './HeroSection.module.css';
 import video from '../../assets/background.mp4';
+import quotation from '../../assets/images/quotation.png';
 import { useState, useEffect } from 'react';
 
 export default function HeroSection() {
@@ -13,13 +14,13 @@ export default function HeroSection() {
       let newOpacity = 1 - (scrollY - fadeStart) / (fadeEnd - fadeStart);
       newOpacity = Math.max(newOpacity, 0);
       setOpacity(newOpacity);
-      document.documentElement.style.setProperty("--opacity-value", newOpacity);
+      document.documentElement.style.setProperty('--opacity-value', newOpacity);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  
+
   return (
     <section className={classes.section}>
       <div className={classes.container}>
@@ -34,8 +35,8 @@ export default function HeroSection() {
             <source src={video} type="video/mp4" />
           </video>
           <h1 className={classes.h1}>
-            <span className={`${classes.color} ${classes.quotes}`}>
-              &ldquo;
+            <span className={classes.quotes}>
+              <img className={classes.quotation} src={quotation} />
             </span>
             M<span className={classes.differentFont}>a</span>ke it simple,
             <br />
