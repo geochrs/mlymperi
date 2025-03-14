@@ -85,7 +85,8 @@ export default function Navbar() {
       const secondSection = document.getElementById('portfolio');
       const margin = 130;
       if (secondSection) {
-        const secondSectionTop = secondSection.getBoundingClientRect().top + window.scrollY + margin;
+        const secondSectionTop =
+          secondSection.getBoundingClientRect().top + window.scrollY + margin;
         setIsSticky(scrollTop >= secondSectionTop);
       } else {
         setIsSticky(scrollTop > 0);
@@ -101,18 +102,22 @@ export default function Navbar() {
 
   const navListClasses = `${classes.navList} ${
     isMenuOpen ? classes.show : ''
-  } ${isSticky ? classes.stickyLinks : classes.nonStickyLinks}`;
+  } ${!isHomePage || isSticky ? classes.stickyLinks : classes.nonStickyLinks}`;
 
   const burgerColor = isMenuOpen
-    ? isSticky
+    ? !isHomePage || isSticky
       ? classes.showSticky
       : classes.showNonSticky
     : '';
 
   return (
     <header className={classes.header}>
-      <div className={`${classes.innerContainer} ${isSticky ? classes.sticky : undefined}`}>
-      <Link>
+      <div
+        className={`${classes.innerContainer} ${
+          isSticky ? classes.sticky : undefined
+        }`}
+      >
+        <Link>
           <img
             src={!isHomePage || isSticky ? logoBlack : logoWhite}
             alt="lymperi logo"
@@ -124,7 +129,9 @@ export default function Navbar() {
             className={`${classes.hamburger} ${
               isMenuOpen ? classes.hamburgerActive : ''
             } ${
-              isSticky ? classes.hamburgerSticky : classes.hamburgerNonSticky
+              !isHomePage || isSticky
+                ? classes.hamburgerSticky
+                : classes.hamburgerNonSticky
             }`}
             onClick={toggleMenu}
           >

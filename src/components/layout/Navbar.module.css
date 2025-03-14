@@ -21,9 +21,8 @@
 }
 
 .sticky {
-  backdrop-filter: blur(40px) brightness(0.9);
+  /* backdrop-filter: blur(40px) brightness(0.9); */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background: none;
 }
 
 .logo {
@@ -161,10 +160,6 @@
     display: flex;
     top: 5rem;
     left: 0;
-  }
-
-  .stickyLinks {
-    top: 3.7rem;
   }
 
   .hamburger {
