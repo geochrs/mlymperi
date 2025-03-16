@@ -11,6 +11,7 @@
 
 .innerContainer {
   background: #cac9c966;
+  position: relative;
   padding: 8px 15px;
   border-radius: 35px;
   max-width: 1800px;
@@ -18,10 +19,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
+}
+
+.innerContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(40px) brightness(0.9);
+  z-index: -1;
 }
 
 .sticky {
-  /* backdrop-filter: blur(40px) brightness(0.9); */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -169,4 +181,8 @@
   .navBar {
     flex: 0;
   }
+
+  /* .sticky {
+    backdrop-filter: none;
+  } */
 }

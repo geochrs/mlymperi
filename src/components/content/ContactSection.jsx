@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
 import classes from './ContactSection.module.css';
+import logo from '../../assets/images/logocontact.png';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({});
@@ -33,8 +34,8 @@ export default function ContactSection() {
   return (
     <section id="contact" className={classes.section}>
       <div className={classes.container}>
-        <div>
-          <h2 className={classes.h2}>Ready to collaborate?</h2>
+        <div className={classes.infoContainer}>
+          <h2 className={classes.h2}>Contact</h2>
           <p>Let's Talk</p>
           <div className={classes.emailInfo}>
             <svg
@@ -81,7 +82,8 @@ export default function ContactSection() {
             </svg>
           </div>
         </div>
-        <div>
+        <div className={classes.formContainer}>
+          <img src={logo} className={classes.logo} />
           <form className={classes.contactForm} onSubmit={handleSubmit}>
             <input
               className={classes.inputName}
@@ -101,17 +103,39 @@ export default function ContactSection() {
               onChange={handleChange}
               required
             />
-            <textarea
-              className={classes.textarea}
+            <input
+              className={classes.inputPhone}
+              type="phone"
+              name="phone"
+              placeholder="Phone"
+              value={formData.phone || ''}
+              onChange={handleChange}
+              required
+            />
+            <input
+              className={classes.inputMessage}
+              type="text"
               name="message"
-              placeholder="Enter your message"
+              placeholder="Message"
               value={formData.message || ''}
               onChange={handleChange}
               required
-            ></textarea>
+            ></input>
             <div className={classes.buttonWrapper}>
               <button type="submit" className={classes.formButton}>
-                Send
+                SEND MESSAGE
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="#fff"
+                    d="M16.315 16.668a1 1 0 1 0 1.415 1.414l4.665-4.665a2 2 0 0 0 0-2.829L17.727 5.92a1 1 0 1 0-1.415 1.414L19.978 11H2a1 1 0 1 0 0 2h17.983l-3.668 3.668Z"
+                  />
+                </svg>
               </button>
             </div>
           </form>
