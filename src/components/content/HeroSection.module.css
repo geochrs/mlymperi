@@ -75,6 +75,20 @@
   height: 55px;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.contentWrapper {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
 .h1,
 .content p {
   opacity: var(--opacity-value);

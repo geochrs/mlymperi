@@ -10,7 +10,9 @@
 }
 
 .innerContainer {
-  background: #cac9c966;
+  opacity: 0;
+  animation: fadeInNavbar 1.5s ease-out forwards;
+  background: #cac9c933;
   position: relative;
   padding: 8px 15px;
   border-radius: 35px;
@@ -185,4 +187,14 @@
   /* .sticky {
     backdrop-filter: none;
   } */
+}
+
+
+@keyframes fadeInNavbar {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
