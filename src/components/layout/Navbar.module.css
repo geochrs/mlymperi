@@ -13,7 +13,6 @@
   opacity: 0;
   animation: fadeInNavbar 1.5s ease-out forwards;
   background: #cac9c933;
-  position: relative;
   padding: 8px 15px;
   border-radius: 35px;
   max-width: 1800px;
@@ -22,17 +21,6 @@
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-}
-
-.innerContainer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  backdrop-filter: blur(40px) brightness(0.9);
-  z-index: -1;
 }
 
 .sticky {
