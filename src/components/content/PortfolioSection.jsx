@@ -1,5 +1,6 @@
 import classes from './PortfolioSection.module.css';
 import site from '../../utils/portfolioImages';
+import { Link } from 'react-router-dom';
 
 export default function PortfolioSection() {
   const cards = Array.from({ length: 14 }, (_, index) => {
@@ -44,18 +45,18 @@ export default function PortfolioSection() {
       <div className={classes.container}>
         <div className={classes.cardsContainer}>
           {cards.map((card, index) => (
-            <div
-              key={card.id}
-              className={classes.card}
-              data-aos="zoom-in"
-              data-aos-delay={getAOSDelay(index)}
-            >
-              <img
-                src={card.image}
-                alt={`Card ${card.id}`}
-                className={classes.image}
-              />
-            </div>
+            <Link key={card.id} to={`/details/${card.id}`} className={classes.card}>
+              <div
+                data-aos="zoom-in"
+                data-aos-delay={getAOSDelay(index)}
+              >
+                <img
+                  src={card.image}
+                  alt={`Card ${card.id}`}
+                  className={classes.image}
+                />
+              </div>
+            </Link>
           ))}
         </div>
       </div>

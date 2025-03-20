@@ -1,0 +1,31 @@
+.container {
+  margin: 0 auto;
+  padding: 120px 10px 20px;
+  text-align: center;
+  font-family: 'UB-Future-Regular';
+}
+
+.h1 {
+  margin-top: 3rem;
+  font-size: 50pt;
+  font-family: 'Ub-Future-Bold';
+}
+
+.content {
+  font-size: 29pt;
+}
+
+.imageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.image {
+  width: 100%;
+  max-width: 1800px;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

@@ -27,7 +27,7 @@
 }
 
 
-@font-face {
+/* @font-face {
   font-family: 'UB-FutureCond-Regular';
   src: url('./assets/fonts/UB-FutureCond-Regular.TTF') format('truetype');
   font-weight: normal;
@@ -46,7 +46,7 @@
   src: url('./assets/fonts/UB-FutureCond-Italic.TTF') format('truetype');
   font-weight: normal;
   font-style: italic;
-}
+} */
 
 * {
   box-sizing: border-box;
