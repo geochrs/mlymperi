@@ -58,11 +58,11 @@ export default function DetailSection({ id }) {
           )}
           {details.images.length > 0 && (
             <div className={classes.imageContainer}>
-              {details.images.map((src, index) => (
+              {details.images.map((src) => (
                 <img
-                  key={index}
+                  key={src}
                   src={src}
-                  alt={`Image ${index + 1}`}
+                  alt="Gallery Image"
                   className={classes.image}
                 />
               ))}
