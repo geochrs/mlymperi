@@ -56,19 +56,19 @@ export default function DetailSection({ id }) {
               ))}
             </p>
           )}
-          {details.images.length > 0 && (
-            <div className={classes.imageContainer}>
-              {details.images.map((src) => (
-                <img
-                  key={src}
-                  src={src}
-                  alt="Gallery Image"
-                  className={classes.image}
-                />
-              ))}
-            </div>
-          )}
         </div>
+        {details.images.length > 0 && (
+          <div className={classes.imageContainer}>
+            {details.images.map((src) => (
+              <img
+                key={src}
+                src={src}
+                alt="Gallery Image"
+                className={classes.image}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

@@ -5,13 +5,13 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 2000;
   transition: all 0.3s ease;
 }
 
 .innerContainer {
-  opacity: 0;
-  animation: fadeInNavbar 1.5s ease-out forwards;
+  opacity: 1;
+  animation: fadeInNavbar 1.5s ease-out;
   background: #cac9c933;
   padding: 8px 15px;
   border-radius: 35px;
