@@ -75,7 +75,6 @@
 .quotation {
   width: 60px;
   height: 55px;
-  
 }
 
 @keyframes fadeIn {
@@ -97,4 +96,14 @@
   opacity: var(--opacity-value);
   transform: translateY(calc(var(--opacity-value) * 20px));
   transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+@media (max-width: 768px) {
+  .h1 {
+    font-size: 4rem;
+  }
+
+  .differentFont {
+    font-size: 5.8rem;
+  }
 }

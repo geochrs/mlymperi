@@ -139,6 +139,12 @@
   background-color: var(--color-primary-2);
 }
 
+@media (max-width: 1200px) {
+  .instagramInfo {
+    margin-bottom: 2rem;
+  }
+}
+
 @media (max-width: 980px) {
   .container {
     flex-wrap: wrap;
@@ -152,6 +158,6 @@
 
 @media (max-width: 560px) {
   .h2 {
-    font-size: 2.6rem;
+    font-size: 3.2rem;
   }
 }
