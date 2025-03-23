@@ -17,6 +17,9 @@ export default function DetailSection({ id }) {
         'The importance of this is grave and unique for the Andritsos Family, as Mr. Andritsos was the first',
         'who started the olive oil production many years ago, utilizing his own olive trees.',
       ],
+      description3: '//',
+      description4:
+        'This olive tree branch is a minimal depiction of the olive itself.',
       images: images,
     },
     2: { title: 'Project Two', description: 'Description for project two.' },
@@ -56,6 +59,10 @@ export default function DetailSection({ id }) {
               ))}
             </p>
           )}
+          {details.description3 && (
+            <p className={classes.green}>{details.description3}</p>
+          )}
+          {details.description4 && <p>{details.description4}</p>}
         </div>
         {details.images.length > 0 && (
           <div className={classes.imageContainer}>

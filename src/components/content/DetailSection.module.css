@@ -34,3 +34,11 @@
   height: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.green {
+  color: #979e67;
+}
+
+.content p {
+  margin: 0.7rem;
+}
