@@ -116,27 +116,27 @@
   transform: translateY(-11px) rotate(-45deg);
 }
 
-.hamburgerSticky div {
+.hamburgerBlack div {
   background-color: var(--color-primary);
 }
 
-.hamburgerNonSticky div {
+.hamburgerWhite div {
   background-color: var(--color-primary-3);
 }
 
-.navList.stickyLinks li a {
+.navList.blackLinks li a {
   color: var(--color-primary);
 }
 
-.navList.nonStickyLinks li a {
+.navList.whiteLinks li a {
   color: var(--color-primary-3);
 }
 
-.navList.show.showSticky {
+.navList.show.whiteSticky {
   background-color: var(--color-primary-3);
 }
 
-.navList.show.showNonSticky {
+.navList.show.blackSticky {
   background-color: var(--color-primary);
 }
 

@@ -12,6 +12,7 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState('');
   const [isSticky, setIsSticky] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isContactInView, setIsContactInView] = useState(false);
 
   const isHomePage = location.pathname === '/';
 
@@ -47,39 +48,81 @@ export default function Navbar() {
     }, 200);
   };
 
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         if (
+  //           entry.target.id === 'portfolio' ||
+  //           entry.target.id === 'contact'
+  //         ) {
+  //           if (entry.isIntersecting) {
+  //             setActiveSection(entry.target.id);
+  //             if (entry.target.id === 'contact') {
+  //               setIsContactInView(true);
+  //             }
+  //           } else {
+  //             if (entry.target.id === 'contact') {
+  //               setIsContactInView(false);
+  //             }
+  //           }
+  //         }
+  //       });
+  //     },
+  //     { threshold: 0.2 }
+  //   );
+
+  //   if (location.pathname === '/') {
+  //     const portfolioSection = document.querySelector('#portfolio');
+  //     const contactSection = document.querySelector('#contact');
+
+  //     if (portfolioSection) observer.observe(portfolioSection);
+  //     if (contactSection) observer.observe(contactSection);
+  //   } else {
+  //     setActiveSection('');
+  //   }
+
+  //   return () => observer.disconnect();
+  // }, [location.pathname]);
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollTop = window.scrollY;
+  //     const secondSection = document.getElementById('portfolio');
+  //     const margin = 130;
+  //     if (secondSection) {
+  //       const secondSectionTop =
+  //         secondSection.getBoundingClientRect().top + window.scrollY + margin;
+  //       setIsSticky(scrollTop >= secondSectionTop);
+  //     } else {
+  //       setIsSticky(scrollTop > 0);
+  //     }
+  //   };
+
+  //   window.addEventListener('scroll', handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (
-            entry.target.id === 'portfolio' ||
-            entry.target.id === 'contact'
-          ) {
+          if (entry.target.id === 'portfolio' || entry.target.id === 'contact') {
             if (entry.isIntersecting) {
               setActiveSection(entry.target.id);
-            } else {
-              setActiveSection('');
+              setIsContactInView(entry.target.id === 'contact');
+            } else if (entry.target.id === 'contact') {
+              setIsContactInView(false);
             }
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.2, rootMargin: '0px 0px -75% 0px' }
     );
 
-    if (location.pathname === '/') {
-      const portfolioSection = document.querySelector('#portfolio');
-      const contactSection = document.querySelector('#contact');
-
-      if (portfolioSection) observer.observe(portfolioSection);
-      if (contactSection) observer.observe(contactSection);
-    } else {
-      setActiveSection('');
-    }
-
-    return () => observer.disconnect();
-  }, [location.pathname]);
-
-  useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       const secondSection = document.getElementById('portfolio');
@@ -93,21 +136,34 @@ export default function Navbar() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    if (location.pathname === '/') {
+      const portfolioSection = document.querySelector('#portfolio');
+      const contactSection = document.querySelector('#contact');
+
+      if (portfolioSection) observer.observe(portfolioSection);
+      if (contactSection) observer.observe(contactSection);
+
+      window.addEventListener('scroll', handleScroll);
+    } else {
+      setActiveSection('');
+    }
 
     return () => {
+      observer.disconnect();
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [location.pathname]);
 
   const navListClasses = `${classes.navList} ${
     isMenuOpen ? classes.show : ''
-  } ${!isHomePage || isSticky ? classes.stickyLinks : classes.nonStickyLinks}`;
+  } ${!isHomePage || isSticky ? classes.blackLinks : classes.whiteLinks} ${
+    isContactInView && isSticky && isHomePage ? classes.whiteLinks : ''
+  } ${isContactInView && isMenuOpen ? classes.blackSticky : ''}`;
 
   const burgerColor = isMenuOpen
     ? !isHomePage || isSticky
-      ? classes.showSticky
-      : classes.showNonSticky
+      ? classes.whiteSticky
+      : classes.blackSticky
     : '';
 
   return (
@@ -119,7 +175,13 @@ export default function Navbar() {
       >
         <Link>
           <img
-            src={!isHomePage || isSticky ? logoBlack : logoWhite}
+            src={
+              isContactInView
+                ? logoWhite
+                : !isHomePage || isSticky
+                ? logoBlack
+                : logoWhite
+            }
             alt="lymperi logo"
             className={classes.logo}
           />
@@ -130,16 +192,16 @@ export default function Navbar() {
               isMenuOpen ? classes.hamburgerActive : ''
             } ${
               !isHomePage || isSticky
-                ? classes.hamburgerSticky
-                : classes.hamburgerNonSticky
-            }`}
+                ? classes.hamburgerBlack
+                : classes.hamburgerWhite
+            } ${isContactInView ? classes.hamburgerWhite : ''}`}
             onClick={toggleMenu}
           >
             <div></div>
             <div></div>
             <div></div>
           </div>
-          <ul className={`${navListClasses} ${burgerColor}`}>
+          <ul className={`${navListClasses} ${burgerColor} `}>
             <li>
               <a
                 href="#"

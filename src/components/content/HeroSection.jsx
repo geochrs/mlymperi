@@ -43,9 +43,9 @@ export default function HeroSection() {
               <br />
               But unique<span className={classes.color}>.</span>
             </h1>
-            <div className={classes.content}>
+            {/* <div className={classes.content}>
               <p>WELCOME</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
