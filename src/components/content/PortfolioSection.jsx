@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 
 export default function PortfolioSection() {
   const cards = Array.from({ length: 14 }, (_, index) => {
-    const id = String(index + 1).padStart(2, '0');
+    const id = index + 1;
     return {
       id: index + 1,
       image: site[id] || 'https://via.placeholder.com/300',
-      link: `/details/${index + 1}`,
+      link: `/details/${id}`,
     };
   });
 
@@ -45,11 +45,12 @@ export default function PortfolioSection() {
       <div className={classes.container}>
         <div className={classes.cardsContainer}>
           {cards.map((card, index) => (
-            <Link key={card.id} to={`/details/${card.id}`} className={classes.card}>
-              <div
-                data-aos="zoom-in"
-                data-aos-delay={getAOSDelay(index)}
-              >
+            <Link
+              key={card.id}
+              to={`/details/${card.id}`}
+              className={classes.card}
+            >
+              <div data-aos="zoom-in" data-aos-delay={getAOSDelay(index)}>
                 <img
                   src={card.image}
                   alt={`Card ${card.id}`}
