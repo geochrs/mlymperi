@@ -24,14 +24,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 3.5rem;
+  max-width: 1500px;
+  margin: 3.5rem auto 0;
   gap: 10px;
 }
 
 .image {
-  width: 100%;
-  max-width: 1500px;
+  max-width: 100%;
   height: auto;
+  max-height: 1000px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 

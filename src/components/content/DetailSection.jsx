@@ -76,7 +76,7 @@ export default function DetailSection({ id }) {
       description:
         'GN Prime Constructions has been transforming homes in London with unrivaled skill and precision.',
       description2:
-        'Our goal was to design a minimalist logo, based on the initials of the two owners" names and the construction details of a building.',
+        "Our goal was to design a minimalist logo, based on the initials of the two owners' names and the construction details of a building.",
     },
   };
 
