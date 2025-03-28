@@ -10,6 +10,9 @@ export default function DetailSection({ id }) {
   const imageModules3 = import.meta.glob('/src/assets/details/3/*.webp', {
     eager: true,
   });
+  const imageModules4 = import.meta.glob('/src/assets/details/4/*.webp', {
+    eager: true,
+  });
   const imageModules8 = import.meta.glob('/src/assets/details/8/*.webp', {
     eager: true,
   });
@@ -25,6 +28,9 @@ export default function DetailSection({ id }) {
       break;
     case 3:
       imageModules = imageModules3;
+      break;
+    case 4:
+      imageModules = imageModules4;
       break;
     case 8:
       imageModules = imageModules8;
@@ -71,6 +77,15 @@ export default function DetailSection({ id }) {
       description4:
         'We designed a logo depicting the historic castle of Lamia and the Greek letter "Λ" (from the word "Lamia").',
     },
+    4: {
+      title: 'Christodoulou Artifacts',
+      description: [
+        'The family business "Christodoulou Artifacts" has specialized in metal and stainless steel constructions for years.',
+      ],
+      description3: '//',
+      description4:
+        'We wanted to create a logo that emphasizes the name, making it memorable.',
+    },
     8: {
       title: 'GN Prime Constructions Limited',
       description:
@@ -90,6 +105,7 @@ export default function DetailSection({ id }) {
       1: '#979e67', // 1 Logo
       2: '#e0c7b3', // 2 Logo
       3: '#e5a596', // 3 Logo
+      4: '#fee67e', // 4 Logo
     };
 
     const color = colors[id];
